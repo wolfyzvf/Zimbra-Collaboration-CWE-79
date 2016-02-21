@@ -1,7 +1,7 @@
 # Description
-  This patch fix the CWE-79 Security Issue
-  More information available at this address :
-  https://bugzilla.zimbra.com/show_bug.cgi?id=101435
+  This patch fix the CWE-79 Security Issue  
+  More information available at this address :  
+  https://bugzilla.zimbra.com/show_bug.cgi?id=101435  
 
 # Installation
 1. first clone the project into the /tmp folder
@@ -10,9 +10,9 @@
 
 2. Then apply the patch as a Zimbra user
 
-    chmod +x /tmp/Zimbra-Collaboration-CWE-79/install.sh
-    su - zimbra
-    /tmp/Zimbra-Collaboration-CWE-79/install.sh
+    chmod +x /tmp/Zimbra-Collaboration-CWE-79/install.sh  
+    su - zimbra  
+    /tmp/Zimbra-Collaboration-CWE-79/install.sh  
 
 # License
 This program is free software: you can redistribute it and/or modify
