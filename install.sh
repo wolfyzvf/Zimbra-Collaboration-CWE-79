@@ -24,6 +24,7 @@ fi
 
 zimbra_version=`zmcontrol -v`
 check_zimlet_installation=`zmzimletctl listZimlets | grep com_zimbra_url | uniq`
+patch_path="/tmp/Zimbra-Collaboration-CWE-79"
 
 # We first test if the zimlet is installed
 if [[ $check_zimlet_installation =~ "com_zimbra_url" ]]
@@ -31,13 +32,13 @@ if [[ $check_zimlet_installation =~ "com_zimbra_url" ]]
   #Finally we check the version of Zimbra and apply the right config_template.xml
   if [[ $zimbra_version =~ "8.0" ]]; then
     echo "deploying 8.0 patched configuration"
-    zmzimletctl configure config_template_80.xml
+    zmzimletctl configure $patch_path/config_template_80.xml
     echo "flushing Zimlet cache"
     zmprov fc zimlet
     echo "Operation complete"
   elif [[ $zimbra_version =~ "8.5" ]]; then
     echo "deploying 8.5 patched configuration"
-    zmzimletctl configure config_template_85.xml
+    zmzimletctl configure $patch_path/config_template_85.xml
     echo "flushing Zimlet cache"
     zmprov fc zimlet
     echo "Operation complete"
