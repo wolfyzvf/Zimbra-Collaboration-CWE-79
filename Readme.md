@@ -1,7 +1,7 @@
 # Description
-This patch fix the CWE-79 Security Issue
-More information available at this address :
-https://bugzilla.zimbra.com/show_bug.cgi?id=101435
+  This patch fix the CWE-79 Security Issue
+  More information available at this address :
+  https://bugzilla.zimbra.com/show_bug.cgi?id=101435
 
 # Installation
 1. first clone the project into the /tmp folder
